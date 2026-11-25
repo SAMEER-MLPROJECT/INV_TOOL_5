@@ -1,0 +1,13 @@
+source: cctv_log
+label: CCTV recorder event log
+reference: false
+timezone: "+05:30"
+time_format: "%d/%m/%Y %H:%M:%S"
+sigma_s: 600
+columns:
+  time: frame_time
+  camera: camera_id
+  atm: atm_id
+  event: event
+  frame_file: frame_file
+  frame_sha256: frame_sha256

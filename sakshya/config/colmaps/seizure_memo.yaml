@@ -1,0 +1,20 @@
+source: seizure_memo
+label: Seizure memo
+reference: false
+timezone: "+05:30"
+time_format: "%d.%m.%Y %H:%M"
+sigma_s: 1800
+columns:
+  item: item_id
+  time: seized_time
+  premises: premises
+  lat: premises_lat
+  lon: premises_lon
+  item_type: item_type
+  description: description
+  imei: imei
+  msisdn: msisdn
+  imsi: imsi
+  mac: mac
+  hostname: hostname
+  officer: officer

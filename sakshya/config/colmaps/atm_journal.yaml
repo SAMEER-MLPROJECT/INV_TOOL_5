@@ -1,0 +1,15 @@
+source: atm_journal
+label: ATM electronic journal
+reference: true
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M:%S"
+sigma_s: 2
+columns:
+  journal_id: journal_id
+  time: txn_time
+  atm: atm_id
+  lat: atm_lat
+  lon: atm_lon
+  account: account
+  amount: amount
+  status: status

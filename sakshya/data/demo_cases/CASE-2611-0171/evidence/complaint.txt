@@ -1,0 +1,7 @@
+Acknowledgement No: 31657885703184
+Filed: 2026-10-08 15:41
+Category: Cyber Attack / Data Breach
+Complainant: Tapti Data Labs, IT administrator (it.admin@tapti.test)
+
+Hamare file server se client data chori hua hai aur ek email aaya hai jisme Bitcoin mein paise maange gaye hain.
+Router logs aur network analysis report saath mein di gayi hai.

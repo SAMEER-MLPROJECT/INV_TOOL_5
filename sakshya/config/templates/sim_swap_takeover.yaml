@@ -1,0 +1,43 @@
+class: sim_swap_takeover
+label: SIM swap account takeover
+summary: Fraudster obtains a new SIM for the victim's number, receives the bank OTPs and drains the account.
+prior_log10: -0.8
+roles:
+  - name: victim
+    label: Complainant
+    find: seed
+  - name: swapper
+    label: SIM swapper
+    find: sim_controller
+    supports: [sim_takeover, otp_on_new_sim, many_sims_on_handset]
+  - name: mule_l1
+    label: First-layer mule
+    kind: account
+    find: first_hop_accounts
+    supports: [received_from_victim, pass_through_fast, pass_through_partial, split_out, new_account]
+    contradicts: [funds_retained, long_history_with_payee]
+  - name: mule_l2
+    label: Onward mule account
+    kind: account
+    set: true
+    optional: true
+    find: onward_accounts
+    supports: [pass_through_fast, pass_through_partial, cash_withdrawal, new_account]
+    contradicts: [funds_retained]
+  - name: cashout
+    label: Cash-out agent
+    optional: true
+    find: present_at_cash
+    supports: [atm_copresence]
+    contradicts: [cleared_at_cash]
+phases:
+  - {name: sim_change, label: SIM change, role: swapper, events: sim_change, observability: [{source: cdr, of: victim, o: 0.95}]}
+  - {name: otp, label: OTP interception, role: swapper, events: otp, after: sim_change, max_lag_h: 6, observability: [{source: cdr, of: victim, o: 0.8}]}
+  - {name: unauthorized_debit, label: Unauthorised debit, role: mule_l1, events: payment, after: sim_change, max_lag_h: 12, observability: [{source: bank_statement, of: victim, o: 0.95}]}
+  - {name: layering, label: Layering, role: mule_l1, events: layering, after: unauthorized_debit, max_lag_h: 12, observability: [{source: bank_statement, of: mule_l1, o: 0.95}]}
+  - {name: cash_out, label: Cash-out, role: mule_l2, events: cash_out, after: layering, max_lag_h: 72, observability: [{source: bank_statement, of: mule_l2, o: 0.9}, {source: atm_journal, o: 0.9}]}
+transitions:
+  sim_change: {median_min: 15, sigma: 0.7}
+  otp: {median_min: 10, sigma: 0.7}
+  unauthorized_debit: {median_min: 10, sigma: 0.8}
+  layering: {median_min: 75, sigma: 0.6}

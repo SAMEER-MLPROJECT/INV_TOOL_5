@@ -1,0 +1,50 @@
+{
+  "class": "unknown",
+  "clock": {},
+  "co_presence": [],
+  "decoy_pairs": [],
+  "events": [
+    {
+      "phase": "control",
+      "ref": [
+        "evidence/network/router_conn_log.csv",
+        21
+      ],
+      "time": 1791230520.0
+    }
+  ],
+  "generator": {
+    "fixed": false,
+    "kind": "unknown",
+    "scale": 1.0,
+    "seed": 83
+  },
+  "impossible": [],
+  "money": {
+    "cash_withdrawn": 0.0,
+    "tainted_accounts": [],
+    "victim_total": 0.0
+  },
+  "persons": {
+    "victim": [
+      "email:it.admin@tapti.test",
+      "mac:00:1b:21:af:66:04"
+    ]
+  },
+  "roles": {
+    "victim": "victim"
+  },
+  "same_event": [],
+  "seed_identifiers": [
+    {
+      "type": "email",
+      "value": "it.admin@tapti.test"
+    },
+    {
+      "type": "mac",
+      "value": "00:1b:21:af:66:04"
+    }
+  ],
+  "tampered": [],
+  "variants": {}
+}

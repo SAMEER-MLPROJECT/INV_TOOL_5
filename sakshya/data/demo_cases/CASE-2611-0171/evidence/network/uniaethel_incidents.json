@@ -1,0 +1,40 @@
+{
+  "tool": "UniAethel",
+  "version": "1.0",
+  "capture": {
+    "file": "office_span.pcap",
+    "start_utc": "2026-10-06T00:00:00+05:30"
+  },
+  "incidents": [
+    {
+      "id": "INC-001",
+      "host": "10.0.0.15",
+      "label": "EXFIL",
+      "trajectory": "Persistent",
+      "window": {
+        "start": "2026-10-06T01:20:00+05:30",
+        "end": "2026-10-08T03:10:00+05:30"
+      },
+      "counterparty": {
+        "top_destination": "192.0.2.80",
+        "distinct_destinations": 1
+      },
+      "scores": {
+        "C2": 0.31,
+        "RECON": 0.05,
+        "DDOS": 0.0,
+        "EXFIL": 0.77
+      },
+      "evidence_vector": {
+        "A_M": 0.88,
+        "A_IF": 0.74,
+        "A_TCN": 0.62,
+        "A_G": 0.81
+      },
+      "reasons": [
+        "outbound volume far above host baseline",
+        "transfers concentrated in off-hours"
+      ]
+    }
+  ]
+}

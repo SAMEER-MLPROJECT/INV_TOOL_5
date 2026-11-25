@@ -1,0 +1,41 @@
+{
+  "tool": "UniAethel",
+  "version": "1.0",
+  "capture": {
+    "file": "router_mirror.pcap",
+    "start_utc": "2026-09-21T18:30:00+00:00"
+  },
+  "incidents": [
+    {
+      "id": "INC-001",
+      "host": "192.168.1.23",
+      "label": "C2",
+      "trajectory": "Stable",
+      "window": {
+        "start": "2026-09-22T10:00:00+05:30",
+        "end": "2026-09-27T19:00:00+05:30"
+      },
+      "counterparty": {
+        "top_destination": "203.0.113.45",
+        "distinct_destinations": 1
+      },
+      "scores": {
+        "C2": 0.71,
+        "RECON": 0.08,
+        "DDOS": 0.0,
+        "EXFIL": 0.05
+      },
+      "evidence_vector": {
+        "A_M": 0.22,
+        "A_IF": 0.41,
+        "A_TCN": 0.97,
+        "A_G": 0.93
+      },
+      "reasons": [
+        "recurrence concentrated on a single destination (phi=1.00)",
+        "strong temporal recurrence to a previously unseen destination (phi=0.91)",
+        "communication structure changed (phi=0.93)"
+      ]
+    }
+  ]
+}

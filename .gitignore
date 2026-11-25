@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+workspace/
+cases/
+sakshya/data/demo_cases/*/analysis/
+sakshya/data/demo_cases/*/ledger.jsonl

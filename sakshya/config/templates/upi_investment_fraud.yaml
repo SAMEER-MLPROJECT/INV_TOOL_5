@@ -1,0 +1,53 @@
+class: upi_investment_fraud
+label: UPI investment fraud
+summary: Victim lured into a fake investment platform pays mule accounts that pass the money on and cash it out.
+prior_log10: -0.5
+roles:
+  - name: victim
+    label: Complainant
+    find: seed
+  - name: lurer
+    label: Lurer
+    find: contacted_seed
+    supports: [contact_before_payment, lure_language]
+    contradicts: [threat_language]
+  - name: mule_l1
+    label: First-layer mule
+    kind: account
+    find: first_hop_accounts
+    supports: [received_from_victim, pass_through_fast, pass_through_partial, split_out, new_account]
+    contradicts: [funds_retained, long_history_with_payee]
+    variants:
+      knowing: {label: "knowing", supports: [commission_retained, contact_with_suspects]}
+      unwitting: {label: "unwitting", contradicts: [commission_retained, contact_with_suspects]}
+  - name: mule_l2
+    label: Onward mule account
+    kind: account
+    set: true
+    optional: true
+    find: onward_accounts
+    supports: [pass_through_fast, pass_through_partial, cash_withdrawal, new_account, split_out]
+    contradicts: [funds_retained]
+  - name: cashout
+    label: Cash-out agent
+    optional: true
+    find: present_at_cash
+    supports: [atm_copresence]
+    contradicts: [cleared_at_cash]
+  - name: controller
+    label: Controller
+    optional: true
+    find: device_operators
+    supports: [beaconing, infra_overlap]
+phases:
+  - {name: contact, label: Contact, role: lurer, events: contact, observability: [{source: chat, o: 0.9}, {source: call_log, o: 0.6}, {source: cdr, of: lurer, o: 0.8}]}
+  - {name: lure, label: Lure, role: lurer, events: lure, after: contact, observability: [{source: chat, o: 0.85}, {source: email, o: 0.8}]}
+  - {name: payment, label: Payment, role: mule_l1, events: payment, after: contact, max_lag_h: 240, observability: [{source: bank_statement, of: victim, o: 0.95}, {source: sms, o: 0.6}]}
+  - {name: layering, label: Layering, role: mule_l1, events: layering, after: payment, max_lag_h: 12, observability: [{source: bank_statement, of: mule_l1, o: 0.95}]}
+  - {name: cash_out, label: Cash-out, role: mule_l2, events: cash_out, after: layering, max_lag_h: 72, observability: [{source: bank_statement, of: mule_l2, o: 0.9}, {source: atm_journal, o: 0.9}]}
+  - {name: control, label: Control infrastructure, role: controller, events: control, optional: true, observability: [{source: net_conn, o: 0.9}, {source: uniaethel, o: 0.9}]}
+transitions:
+  contact: {median_min: 2880, sigma: 1.0}
+  lure: {median_min: 1440, sigma: 1.0}
+  payment: {median_min: 12, sigma: 0.8}
+  layering: {median_min: 70, sigma: 0.6}

@@ -1,0 +1,20 @@
+source: bank_statement
+label: Bank account statement
+reference: true
+timezone: "+05:30"
+time_format: "%d-%m-%Y %H:%M:%S"
+sigma_s: 2
+columns:
+  txn_id: txn_id
+  time: value_time
+  account: account
+  direction: direction
+  amount: amount
+  balance: balance
+  channel: channel
+  counterparty_account: counterparty_account
+  counterparty_upi: counterparty_upi
+  counterparty_name: counterparty_name
+  ref: upi_ref
+  atm: atm_id
+  narration: narration

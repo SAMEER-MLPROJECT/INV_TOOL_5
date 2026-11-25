@@ -1,0 +1,73 @@
+id: CASE-2611-0147
+title: Fake trading app investment fraud
+seed:
+  kind: complaint
+  identifiers:
+  - type: phone
+    value: '+919516761222'
+  - type: account
+    value: IVBK0323115:4742217245142
+evidence:
+- file: evidence/telecom/cdr_918862057986.csv
+  source: cdr
+- file: evidence/telecom/cdr_917227918058.csv
+  source: cdr
+- file: evidence/telecom/cdr_919589481131.csv
+  source: cdr
+- file: evidence/victim_phone/call_log.csv
+  source: call_log
+  owner: '+919516761222'
+- file: evidence/victim_phone/sms.csv
+  source: sms
+  owner: '+919516761222'
+- file: evidence/email/lure_offer.eml
+  source: email
+- file: evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv
+  source: cctv_log
+  atm_id: ATM-NCBK-NOI-01
+- file: evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv
+  source: atm_journal
+- file: evidence/cctv/frames/ATM-NCBK-NOI-01_001.png
+  source: media
+- file: evidence/cctv/frames/ATM-NCBK-NOI-01_002.png
+  source: media
+- file: evidence/cctv/frames/ATM-NCBK-NOI-01_003.png
+  source: media
+- file: evidence/email/deposit_receipt.eml
+  source: email
+- file: evidence/telecom/tower_dump_ATM-NCBK-NOI-01.csv
+  source: tower_dump
+- file: evidence/cloud/location_history.json
+  source: cloud_location
+- file: evidence/network/router_conn_log.csv
+  source: net_conn
+- file: evidence/network/uniaethel_incidents.json
+  source: uniaethel
+- file: evidence/seizure/seizure_memo.csv
+  source: seizure_memo
+- file: evidence/telecom/kyc_subscribers.csv
+  source: kyc_subscriber
+- file: evidence/bank/kyc_accounts.csv
+  source: kyc_account
+- file: evidence/complaint.txt
+  source: complaint
+- file: evidence/bank/statement_245142.csv
+  source: bank_statement
+  account: IVBK0323115:4742217245142
+- file: evidence/bank/statement_169849.csv
+  source: bank_statement
+  account: IVBK0120429:5372509169849
+- file: evidence/bank/statement_675556.csv
+  source: bank_statement
+  account: NCBK0289945:3552658675556
+- file: evidence/bank/statement_914457.csv
+  source: bank_statement
+  account: NCBK0656883:3671374914457
+- file: evidence/victim_phone/whatsapp_chat_8862057986.txt
+  source: chat
+  owner: '+919516761222'
+  owner_name: Meera
+  other: '+918862057986'
+- file: evidence/telecom/tower_list.csv
+  source: tower_list
+complaint_time: '2026-09-28 10:13:00'

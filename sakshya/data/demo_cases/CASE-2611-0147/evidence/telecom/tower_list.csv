@@ -1,0 +1,8 @@
+cell_id,lat,lon,radius_m,address
+NOI-04101,28.56977,77.325512,1500,"Site 1, Sector 18, Noida, Uttar Pradesh"
+NOI-04124,28.576359,77.325909,1200,"Site 4, Sector 18, Noida, Uttar Pradesh"
+NOI-04130,28.58375,77.32427,1000,"Site 5, Sector 18, Noida, Uttar Pradesh"
+NOI-04141,28.561447,77.341758,1500,"Site 6, Sector 18, Noida, Uttar Pradesh"
+NOI-04145,28.558846,77.330059,1200,"Site 7, Sector 18, Noida, Uttar Pradesh"
+NOI-04153,28.588323,77.338304,900,"Site 8, Sector 18, Noida, Uttar Pradesh"
+PAT-04105,25.610648,85.144198,800,"Site 1, Boring Road, Patna, Bihar"

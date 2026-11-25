@@ -1,0 +1,65 @@
+weights:
+  received_from_victim: 1.0
+  pass_through_fast: 1.5
+  pass_through_partial: 0.7
+  split_out: 0.6
+  cash_withdrawal: 1.0
+  new_account: 0.8
+  funds_retained: -1.5
+  commission_retained: 0.6
+  long_history_with_payee: -1.5
+  contact_before_payment: 1.2
+  lure_language: 1.0
+  threat_language: 1.2
+  sim_takeover: 1.6
+  otp_on_new_sim: 1.0
+  many_sims_on_handset: 0.7
+  atm_copresence: 1.0
+  cleared_at_cash: -3.0
+  beaconing: 1.0
+  exfil_volume: 1.0
+  infra_overlap: 0.8
+  contact_with_suspects: 0.6
+
+suspicious: [pass_through_fast, threat_language, lure_language, sim_takeover, beaconing, exfil_volume, atm_copresence, cash_withdrawal]
+
+pass_through_window_min: 60
+split_window_min: 180
+new_account_days: 60
+commission_band: [0.004, 0.06]
+retained_share: 0.8
+
+keywords:
+  lure:
+    - guaranteed
+    - returns
+    - return milega
+    - profit
+    - invest
+    - trading
+    - sebi registered
+    - deposit
+    - withdrawal ke liye
+    - premium group
+    - special slot
+  threat:
+    - viral
+    - video
+    - share kar dunga
+    - bhej denge
+    - leak
+    - publish
+    - warna
+    - warning
+    - police ke paas
+    - do not contact police
+    - pay or
+  otp:
+    - otp
+    - one time password
+
+beaconing:
+  min_flows: 30
+  max_cv: 0.15
+exfil:
+  min_bytes: 200000000

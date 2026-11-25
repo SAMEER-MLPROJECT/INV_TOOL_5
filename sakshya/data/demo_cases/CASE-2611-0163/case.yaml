@@ -1,0 +1,32 @@
+id: CASE-2611-0163
+title: Furniture delivery dispute
+seed:
+  kind: complaint
+  identifiers:
+  - type: phone
+    value: '+917573941000'
+  - type: account
+    value: CUBK0362619:3249400576705
+evidence:
+- file: evidence/victim_phone/call_log.csv
+  source: call_log
+  owner: '+917573941000'
+- file: evidence/victim_phone/sms.csv
+  source: sms
+  owner: '+917573941000'
+- file: evidence/bank/kyc_accounts.csv
+  source: kyc_account
+- file: evidence/complaint.txt
+  source: complaint
+- file: evidence/bank/statement_576705.csv
+  source: bank_statement
+  account: CUBK0362619:3249400576705
+- file: evidence/bank/statement_812261.csv
+  source: bank_statement
+  account: NCBK0343040:5799362812261
+- file: evidence/victim_phone/whatsapp_chat_8224466798.txt
+  source: chat
+  owner: '+917573941000'
+  owner_name: Neha
+  other: '+918224466798'
+complaint_time: '2026-10-02 10:10:00'

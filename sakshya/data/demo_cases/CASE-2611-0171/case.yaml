@@ -1,0 +1,19 @@
+id: CASE-2611-0171
+title: Data theft with ransom demand
+seed:
+  kind: complaint
+  identifiers:
+  - type: email
+    value: it.admin@tapti.test
+  - type: mac
+    value: 00:1b:21:af:66:04
+evidence:
+- file: evidence/network/router_conn_log.csv
+  source: net_conn
+- file: evidence/network/uniaethel_incidents.json
+  source: uniaethel
+- file: evidence/email/ransom_note.eml
+  source: email
+- file: evidence/complaint.txt
+  source: complaint
+complaint_time: '2026-10-08 15:41:00'

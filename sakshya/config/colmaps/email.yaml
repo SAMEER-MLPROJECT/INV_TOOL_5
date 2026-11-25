@@ -1,0 +1,5 @@
+source: email
+label: Email message
+reference: false
+sigma_s: 120
+columns: {}

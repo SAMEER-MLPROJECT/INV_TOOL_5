@@ -1,0 +1,52 @@
+id: CASE-2611-0152
+title: Video call sextortion with UPI payments
+seed:
+  kind: complaint
+  identifiers:
+  - type: phone
+    value: '+916537620450'
+  - type: account
+    value: CUBK0437905:8937441167515
+evidence:
+- file: evidence/telecom/cdr_916676285638.csv
+  source: cdr
+- file: evidence/telecom/cdr_919549765123.csv
+  source: cdr
+- file: evidence/victim_phone/call_log.csv
+  source: call_log
+  owner: '+916537620450'
+- file: evidence/victim_phone/sms.csv
+  source: sms
+  owner: '+916537620450'
+- file: evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv
+  source: cctv_log
+  atm_id: ATM-CUBK-JMT-01
+- file: evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv
+  source: atm_journal
+- file: evidence/cctv/frames/ATM-CUBK-JMT-01_001.png
+  source: media
+- file: evidence/telecom/tower_dump_ATM-CUBK-JMT-01.csv
+  source: tower_dump
+- file: evidence/telecom/kyc_subscribers.csv
+  source: kyc_subscriber
+- file: evidence/bank/kyc_accounts.csv
+  source: kyc_account
+- file: evidence/complaint.txt
+  source: complaint
+- file: evidence/bank/statement_167515.csv
+  source: bank_statement
+  account: CUBK0437905:8937441167515
+- file: evidence/bank/statement_131893.csv
+  source: bank_statement
+  account: IVBK0289189:3280697131893
+- file: evidence/bank/statement_312230.csv
+  source: bank_statement
+  account: CUBK0403397:3123164312230
+- file: evidence/victim_phone/whatsapp_chat_6676285638.txt
+  source: chat
+  owner: '+916537620450'
+  owner_name: Rekha
+  other: '+916676285638'
+- file: evidence/telecom/tower_list.csv
+  source: tower_list
+complaint_time: '2026-09-08 11:32:00'

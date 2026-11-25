@@ -1,0 +1,345 @@
+{
+  "class": "sextortion",
+  "clock": {
+    "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv": {
+      "kind": "drift",
+      "offset_s": 1.634129
+    }
+  },
+  "co_presence": [
+    {
+      "entity": "phone:+919549765123",
+      "events": [
+        [
+          "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+          4
+        ]
+      ]
+    }
+  ],
+  "decoy_pairs": [],
+  "events": [
+    {
+      "phase": "contact",
+      "ref": [
+        "evidence/victim_phone/whatsapp_chat_6676285638.txt",
+        2
+      ],
+      "time": 1788712500.0
+    },
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_167515.csv",
+        36
+      ],
+      "time": 1788756840.0
+    },
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_167515.csv",
+        37
+      ],
+      "time": 1788759540.0
+    },
+    {
+      "phase": "layering",
+      "ref": [
+        "evidence/bank/statement_131893.csv",
+        4
+      ],
+      "time": 1788759812.0
+    },
+    {
+      "phase": "cash_out",
+      "ref": [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        4
+      ],
+      "time": 1788765032.0
+    }
+  ],
+  "generator": {
+    "fixed": false,
+    "kind": "sextortion",
+    "scale": 1.0,
+    "seed": 31
+  },
+  "impossible": [],
+  "money": {
+    "cash_account": "account:CUBK0403397:3123164312230",
+    "cash_atm": "ATM-CUBK-JMT-01",
+    "cash_withdrawn": 29500.0,
+    "first_cash_time": 1788765032.0,
+    "layering_time": 1788759812.0,
+    "tainted_accounts": [
+      "account:IVBK0289189:3280697131893",
+      "account:CUBK0403397:3123164312230"
+    ],
+    "victim_total": 69000.0
+  },
+  "persons": {
+    "mule_a": [
+      "account:IVBK0289189:3280697131893",
+      "upi:pay.helpdesk@ivb",
+      "phone:+918284697859",
+      "imsi:404141922278267"
+    ],
+    "mule_c": [
+      "account:CUBK0403397:3123164312230",
+      "upi:krishna318@cub",
+      "phone:+919375075327",
+      "imsi:404142317975219"
+    ],
+    "suspect": [
+      "phone:+916676285638",
+      "phone:+919549765123",
+      "imei:351587752672049",
+      "imei:359554805193888",
+      "imsi:404141702943267",
+      "imsi:404142114476318"
+    ],
+    "victim": [
+      "phone:+916537620450",
+      "account:CUBK0437905:8937441167515",
+      "upi:rekha60@cub",
+      "imsi:404163878210777"
+    ]
+  },
+  "roles": {
+    "cashout": "suspect",
+    "extortionist": "suspect",
+    "mule_l1": [
+      "mule_a"
+    ],
+    "mule_l2": [
+      "mule_c"
+    ],
+    "victim": "victim"
+  },
+  "same_event": [
+    [
+      [
+        "evidence/telecom/cdr_916676285638.csv",
+        24
+      ],
+      [
+        "evidence/victim_phone/call_log.csv",
+        49
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        4
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        4
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        15
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        15
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        14
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        14
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        12
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        12
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        7
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        7
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        3
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        3
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        2
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        2
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        11
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        11
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        10
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        10
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        5
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        5
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        8
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        8
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        9
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        9
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        6
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        6
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        13
+      ],
+      [
+        "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+        13
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_167515.csv",
+        36
+      ],
+      [
+        "evidence/bank/statement_131893.csv",
+        2
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_167515.csv",
+        36
+      ],
+      [
+        "evidence/victim_phone/sms.csv",
+        12
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_167515.csv",
+        37
+      ],
+      [
+        "evidence/bank/statement_131893.csv",
+        3
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_167515.csv",
+        37
+      ],
+      [
+        "evidence/victim_phone/sms.csv",
+        13
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_131893.csv",
+        4
+      ],
+      [
+        "evidence/bank/statement_312230.csv",
+        2
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_312230.csv",
+        3
+      ],
+      [
+        "evidence/bank/atm_journal_ATM-CUBK-JMT-01.csv",
+        4
+      ]
+    ]
+  ],
+  "seed_identifiers": [
+    {
+      "type": "phone",
+      "value": "+916537620450"
+    },
+    {
+      "type": "account",
+      "value": "CUBK0437905:8937441167515"
+    }
+  ],
+  "tampered": [],
+  "variants": {}
+}

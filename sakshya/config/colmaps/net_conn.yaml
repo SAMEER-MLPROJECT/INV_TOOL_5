@@ -1,0 +1,13 @@
+source: net_conn
+label: Router connection log
+reference: false
+sigma_s: 5
+columns:
+  time: ts
+  src_ip: src_ip
+  src_mac: src_mac
+  dst_ip: dst_ip
+  dst_port: dst_port
+  dst_host: dst_host
+  bytes_out: bytes_out
+  bytes_in: bytes_in

@@ -1,0 +1,13 @@
+source: kyc_account
+label: Bank account KYC
+reference: false
+timezone: "+05:30"
+time_format: "%Y-%m-%d"
+sigma_s: 86400
+columns:
+  account: account
+  upi: upi
+  name: holder_name
+  phone: registered_phone
+  address: address
+  time: opened_on

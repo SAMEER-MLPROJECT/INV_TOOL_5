@@ -1,0 +1,12 @@
+source: call_log
+label: Phone call log export
+reference: false
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M:%S"
+sigma_s: 120
+clock_domain: export
+columns:
+  time: timestamp
+  number: number
+  type: type
+  duration: duration

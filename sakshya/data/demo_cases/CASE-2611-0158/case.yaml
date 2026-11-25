@@ -1,0 +1,51 @@
+id: CASE-2611-0158
+title: SIM swap and unauthorised bank debits
+seed:
+  kind: complaint
+  identifiers:
+  - type: phone
+    value: '+918414126576'
+  - type: account
+    value: IVBK0988940:1955043984369
+evidence:
+- file: evidence/telecom/cdr_918414126576.csv
+  source: cdr
+- file: evidence/telecom/cdr_919116681927.csv
+  source: cdr
+- file: evidence/victim_phone/call_log.csv
+  source: call_log
+  owner: '+918414126576'
+- file: evidence/victim_phone/sms.csv
+  source: sms
+  owner: '+918414126576'
+- file: evidence/cctv/ATM-IVBK-JMT-01_dvr_log.csv
+  source: cctv_log
+  atm_id: ATM-IVBK-JMT-01
+- file: evidence/bank/atm_journal_ATM-IVBK-JMT-01.csv
+  source: atm_journal
+- file: evidence/cctv/frames/ATM-IVBK-JMT-01_001.png
+  source: media
+- file: evidence/cctv/frames/ATM-IVBK-JMT-01_002.png
+  source: media
+- file: evidence/cctv/frames/ATM-IVBK-JMT-01_003.png
+  source: media
+- file: evidence/telecom/tower_dump_ATM-IVBK-JMT-01.csv
+  source: tower_dump
+- file: evidence/telecom/kyc_subscribers.csv
+  source: kyc_subscriber
+- file: evidence/bank/kyc_accounts.csv
+  source: kyc_account
+- file: evidence/complaint.txt
+  source: complaint
+- file: evidence/bank/statement_984369.csv
+  source: bank_statement
+  account: IVBK0988940:1955043984369
+- file: evidence/bank/statement_088828.csv
+  source: bank_statement
+  account: NCBK0524008:8812036088828
+- file: evidence/bank/statement_855100.csv
+  source: bank_statement
+  account: IVBK0409198:8042815855100
+- file: evidence/telecom/tower_list.csv
+  source: tower_list
+complaint_time: '2026-09-29 17:10:00'

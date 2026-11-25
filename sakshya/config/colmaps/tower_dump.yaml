@@ -1,0 +1,13 @@
+source: tower_dump
+label: Tower dump
+reference: true
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M:%S"
+sigma_s: 2
+columns:
+  record_id: record_id
+  time: seen_time
+  cell: cell_id
+  msisdn: msisdn
+  imei: imei
+  imsi: imsi

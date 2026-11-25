@@ -1,0 +1,9 @@
+source: tower_list
+label: Cell site list
+reference: false
+columns:
+  cell: cell_id
+  lat: lat
+  lon: lon
+  radius: radius_m
+  address: address

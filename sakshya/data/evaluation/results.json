@@ -1,0 +1,4366 @@
+{
+  "calibration_fit": {
+    "links": 6411,
+    "log_loss": 0.0104,
+    "log_loss_unscaled": 0.0179,
+    "scale": 0.687
+  },
+  "cases": [
+    {
+      "analysis_s": 0.341,
+      "case_id": "HELD-UPI_-01",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 4.6,
+          "estimate_s": 185.0,
+          "file": "evidence/cctv/ATM-GGBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 180.426627
+        }
+      ],
+      "digest": "93ea2ed663ecbd4c21c9381ab0186b79de5cf49ac1b4f2ce25c2b9cdd4276d05",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 20,
+          "rows": 20
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 20,
+          "rows": 20
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 107,
+          "rows": 107
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "cloud_location": {
+          "coverage": 1.0,
+          "parsed": 128,
+          "rows": 128
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 592,
+          "rows": 592
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0051,
+        "cash_found": 147749.64,
+        "cash_truth": 148500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 200000.0,
+        "victim_total_truth": 200000.0
+      },
+      "prediction": {
+        "actual_min": 78.0,
+        "available": true,
+        "error_min": 18.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.6742,
+          0.6754,
+          0.6659,
+          0.6746,
+          0.6728,
+          0.6738
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 2,
+        "f1": 0.710526,
+        "fn": 22,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.55102,
+        "tp": 27
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 32
+      },
+      "tamper": {
+        "caught": 1,
+        "expected": 1,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 28,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9788,
+        "median_error_s": 4.6,
+        "p90_error_s": 4.6
+      },
+      "timings": {
+        "explain": 0.0551,
+        "facts": 0.0211,
+        "intake_and_normalise": 0.0617,
+        "links": 0.1924,
+        "people_and_indicators": 0.0105,
+        "views": 0.0454
+      },
+      "traceability": {
+        "pointers": 107,
+        "resolvable": 107,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.557,
+      "case_id": "HELD-UPI_-02",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 1.8,
+          "estimate_s": -620.0,
+          "file": "evidence/cctv/ATM-CUBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -621.845972
+        }
+      ],
+      "digest": "56385e3e20120b30af923451da9c4d0cf7b8132e23d38cff5f6f49cabe0319e6",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 21,
+          "rows": 21
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 65,
+          "rows": 65
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 21,
+          "rows": 21
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 110,
+          "rows": 110
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1656,
+          "rows": 1656
+        },
+        "seizure_memo": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 694,
+          "rows": 694
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0056,
+        "cash_found": 146182.38,
+        "cash_truth": 147000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 4,
+        "victim_total_found": 295000.0,
+        "victim_total_truth": 295000.0
+      },
+      "prediction": {
+        "actual_min": 74.4,
+        "available": true,
+        "error_min": 14.4,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": 1.0,
+        "links": 1.0,
+        "posteriors": [
+          0.6518,
+          0.6496,
+          0.6496
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 4,
+        "f1": 0.870968,
+        "fn": 16,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.771429,
+        "tp": 54
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 37
+      },
+      "tamper": {
+        "caught": 1,
+        "expected": 1,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 32,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9758,
+        "median_error_s": 1.8,
+        "p90_error_s": 1.8
+      },
+      "timings": {
+        "explain": 0.1226,
+        "facts": 0.0471,
+        "intake_and_normalise": 0.1246,
+        "links": 0.2253,
+        "people_and_indicators": 0.0342,
+        "views": 0.0554
+      },
+      "traceability": {
+        "pointers": 124,
+        "resolvable": 124,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.552,
+      "case_id": "HELD-UPI_-03",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 6.2,
+          "estimate_s": -571.0,
+          "file": "evidence/cctv/ATM-CUBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -577.247662
+        }
+      ],
+      "digest": "1888ff107b35ee964dae47a46dc734aa97977f6d24ab0d029dfc5f849916483f",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 67,
+          "rows": 67
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 112,
+          "rows": 112
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "cloud_location": {
+          "coverage": 1.0,
+          "parsed": 133,
+          "rows": 133
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 6,
+          "rows": 6
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1650,
+          "rows": 1650
+        },
+        "seizure_memo": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 14,
+          "rows": 14
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 782,
+          "rows": 782
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0114,
+        "cash_found": 48937.32,
+        "cash_truth": 49500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 6,
+        "victim_total_found": 273000.0,
+        "victim_total_truth": 273000.0
+      },
+      "prediction": {
+        "actual_min": 69.5,
+        "available": true,
+        "error_min": 9.5,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": 1.0,
+        "links": 1.0,
+        "posteriors": [
+          0.569,
+          0.6228
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 4,
+        "f1": 0.876712,
+        "fn": 18,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.780488,
+        "tp": 64
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 36
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 29,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9803,
+        "median_error_s": 6.2,
+        "p90_error_s": 6.2
+      },
+      "timings": {
+        "explain": 0.1256,
+        "facts": 0.0726,
+        "intake_and_normalise": 0.1418,
+        "links": 0.1687,
+        "people_and_indicators": 0.0373,
+        "views": 0.0593
+      },
+      "traceability": {
+        "pointers": 117,
+        "resolvable": 117,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.572,
+      "case_id": "HELD-UPI_-04",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 9.9,
+          "estimate_s": -207.0,
+          "file": "evidence/cctv/ATM-CUBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -216.859207
+        }
+      ],
+      "digest": "089d1f371ee264b2b19b7931e5b5141b5c22f3e3ca882c74d58bc582c12df20f",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 14,
+          "rows": 14
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 63,
+          "rows": 63
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 14,
+          "rows": 14
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 108,
+          "rows": 108
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1323,
+          "rows": 1323
+        },
+        "seizure_memo": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 791,
+          "rows": 791
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0108,
+        "cash_found": 69739.2,
+        "cash_truth": 70500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 4,
+        "victim_total_found": 248000.0,
+        "victim_total_truth": 248000.0
+      },
+      "prediction": {
+        "actual_min": 57.2,
+        "available": true,
+        "error_min": 2.8,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": 1.0,
+        "links": 1.0,
+        "posteriors": [
+          0.616,
+          0.6166
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 4,
+        "f1": 0.870968,
+        "fn": 16,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.771429,
+        "tp": 54
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 29
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 24,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9783,
+        "median_error_s": 9.9,
+        "p90_error_s": 9.9
+      },
+      "timings": {
+        "explain": 0.1213,
+        "facts": 0.0561,
+        "intake_and_normalise": 0.2165,
+        "links": 0.1353,
+        "people_and_indicators": 0.0362,
+        "views": 0.0524
+      },
+      "traceability": {
+        "pointers": 106,
+        "resolvable": 106,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.335,
+      "case_id": "HELD-UPI_-05",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 2.9,
+          "estimate_s": -662.0,
+          "file": "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -659.082571
+        }
+      ],
+      "digest": "e4c14c40ba737fc03ede4450845f05ccfa4996e1c9f048ea7bdc79a346c8d5f6",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 17,
+          "rows": 17
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 47,
+          "rows": 47
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 17,
+          "rows": 17
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 118,
+          "rows": 118
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "cloud_location": {
+          "coverage": 1.0,
+          "parsed": 130,
+          "rows": 130
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 758,
+          "rows": 758
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0051,
+        "cash_found": 176100.64,
+        "cash_truth": 177000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 200000.0,
+        "victim_total_truth": 200000.0
+      },
+      "prediction": {
+        "actual_min": 63.0,
+        "available": true,
+        "error_min": 3.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.4321,
+          0.6256,
+          0.4308,
+          0.627,
+          0.4258,
+          0.6242,
+          0.4325,
+          0.627
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 2,
+        "f1": 0.710526,
+        "fn": 22,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.55102,
+        "tp": 27
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 30
+      },
+      "tamper": {
+        "caught": 1,
+        "expected": 1,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 26,
+        "kendall_tau_after": 0.9985,
+        "kendall_tau_before": 0.9631,
+        "median_error_s": 2.9,
+        "p90_error_s": 2.9
+      },
+      "timings": {
+        "explain": 0.0501,
+        "facts": 0.0295,
+        "intake_and_normalise": 0.0738,
+        "links": 0.166,
+        "people_and_indicators": 0.0107,
+        "views": 0.0462
+      },
+      "traceability": {
+        "pointers": 101,
+        "resolvable": 101,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.509,
+      "case_id": "HELD-UPI_-06",
+      "class": "upi_investment_fraud",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 6.8,
+          "estimate_s": 521.0,
+          "file": "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 514.212729
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 9.0,
+          "estimate_s": 19791.0,
+          "file": "evidence/victim_phone/call_log.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 9.0,
+          "estimate_s": 19791.0,
+          "file": "evidence/victim_phone/sms.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        }
+      ],
+      "digest": "3cc7b569c373e6e1d1c8f6e768ecc4d649a40d80bfb0b993412add862bc13870",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 65,
+          "rows": 65
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 50,
+          "rows": 50
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 109,
+          "rows": 109
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 7,
+          "rows": 7
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1661,
+          "rows": 1661
+        },
+        "seizure_memo": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 559,
+          "rows": 559
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": 0.006,
+        "cash_found": 136673.22,
+        "cash_truth": 137500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 4,
+        "victim_total_found": 300000.0,
+        "victim_total_truth": 300000.0
+      },
+      "prediction": {
+        "actual_min": 84.2,
+        "available": true,
+        "error_min": 24.2,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 60.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": 1.0,
+        "links": 1.0,
+        "posteriors": [
+          0.6488,
+          0.6482,
+          0.6497
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 4,
+        "f1": 0.870968,
+        "fn": 16,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.771429,
+        "tp": 54
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "upi_investment_fraud",
+        "class_truth": "upi_investment_fraud",
+        "mule_l1_correct": true,
+        "variant_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 34
+      },
+      "tamper": {
+        "caught": 1,
+        "expected": 1,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 92,
+        "kendall_tau_after": 0.9993,
+        "kendall_tau_before": 0.9766,
+        "median_error_s": 9.0,
+        "p90_error_s": 9.0
+      },
+      "timings": {
+        "explain": 0.1216,
+        "facts": 0.0516,
+        "intake_and_normalise": 0.1259,
+        "links": 0.1743,
+        "people_and_indicators": 0.0305,
+        "views": 0.055
+      },
+      "traceability": {
+        "pointers": 115,
+        "resolvable": 115,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.203,
+      "case_id": "HELD-SEXT-01",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 1.7,
+          "estimate_s": 489.0,
+          "file": "evidence/cctv/ATM-IVBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 490.682298
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 7.0,
+          "estimate_s": 19793.0,
+          "file": "evidence/victim_phone/call_log.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        }
+      ],
+      "digest": "1cba3be7e620c6f4aba40f23f2a8a97947435e3e08cf5677b2ee42b03aebe31f",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 41,
+          "rows": 41
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 29,
+          "rows": 29
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 427,
+          "rows": 427
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0041,
+        "cash_found": 48302.31,
+        "cash_truth": 48500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 75000.0,
+        "victim_total_truth": 75000.0
+      },
+      "prediction": {
+        "actual_min": 75.0,
+        "available": true,
+        "error_min": 5.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.6115
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 20
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 65,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9971,
+        "median_error_s": 7.0,
+        "p90_error_s": 7.0
+      },
+      "timings": {
+        "explain": 0.0378,
+        "facts": 0.0212,
+        "intake_and_normalise": 0.0496,
+        "links": 0.0819,
+        "people_and_indicators": 0.0071,
+        "views": 0.0365
+      },
+      "traceability": {
+        "pointers": 71,
+        "resolvable": 71,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.224,
+      "case_id": "HELD-SEXT-02",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 7.9,
+          "estimate_s": 401.0,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 408.881403
+        }
+      ],
+      "digest": "81d1c50dbdcb79f4211251f7027755d674435f67732d17bead64358d735ddd99",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 44,
+          "rows": 44
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 31,
+          "rows": 31
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 446,
+          "rows": 446
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0029,
+        "cash_found": 71790.9,
+        "cash_truth": 72000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 107000.0,
+        "victim_total_truth": 107000.0
+      },
+      "prediction": {
+        "actual_min": 67.0,
+        "available": true,
+        "error_min": 3.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.2876,
+          0.2847
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 0.938776,
+        "fn": 3,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.869565,
+        "tp": 23
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 20,
+        "kendall_tau_after": 0.9895,
+        "kendall_tau_before": 0.9789,
+        "median_error_s": 7.9,
+        "p90_error_s": 7.9
+      },
+      "timings": {
+        "explain": 0.0417,
+        "facts": 0.022,
+        "intake_and_normalise": 0.0539,
+        "links": 0.0963,
+        "people_and_indicators": 0.007,
+        "views": 0.0382
+      },
+      "traceability": {
+        "pointers": 72,
+        "resolvable": 72,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.273,
+      "case_id": "HELD-SEXT-03",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 0.5,
+          "estimate_s": 287.0,
+          "file": "evidence/cctv/ATM-NCBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 286.46941
+        }
+      ],
+      "digest": "ba4fc903b4678e570a9cb67fd11782b3b047831e2e886eb60d9c9b9fd95d543d",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 44,
+          "rows": 44
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 25,
+          "rows": 25
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 453,
+          "rows": 453
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0028,
+        "cash_found": 88749.06,
+        "cash_truth": 89000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 109000.0,
+        "victim_total_truth": 109000.0
+      },
+      "prediction": {
+        "actual_min": 58.0,
+        "available": true,
+        "error_min": 12.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.6037,
+          0.6081
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 25
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 19,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9766,
+        "median_error_s": 0.5,
+        "p90_error_s": 0.5
+      },
+      "timings": {
+        "explain": 0.0461,
+        "facts": 0.0345,
+        "intake_and_normalise": 0.0645,
+        "links": 0.1171,
+        "people_and_indicators": 0.0079,
+        "views": 0.0479
+      },
+      "traceability": {
+        "pointers": 81,
+        "resolvable": 81,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.343,
+      "case_id": "HELD-SEXT-04",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 7.1,
+          "estimate_s": 110.0,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 102.888779
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 5.0,
+          "estimate_s": 19795.0,
+          "file": "evidence/victim_phone/call_log.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        }
+      ],
+      "digest": "64ec824d7918a6eb422904ac97902b5ac3a9ced685eefe7fc0f6085c6d79aad0",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 44,
+          "rows": 44
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 31,
+          "rows": 31
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 452,
+          "rows": 452
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0028,
+        "cash_found": 82266.29,
+        "cash_truth": 82500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 108000.0,
+        "victim_total_truth": 108000.0
+      },
+      "prediction": {
+        "actual_min": 57.0,
+        "available": true,
+        "error_min": 13.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5166,
+          0.5212
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 24
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 67,
+        "kendall_tau_after": 0.9991,
+        "kendall_tau_before": 0.9828,
+        "median_error_s": 5.0,
+        "p90_error_s": 7.1
+      },
+      "timings": {
+        "explain": 0.0461,
+        "facts": 0.0263,
+        "intake_and_normalise": 0.0519,
+        "links": 0.2085,
+        "people_and_indicators": 0.0078,
+        "views": 0.0418
+      },
+      "traceability": {
+        "pointers": 72,
+        "resolvable": 72,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.209,
+      "case_id": "HELD-SEXT-05",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 8.5,
+          "estimate_s": -510.0,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -518.515056
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 7.0,
+          "estimate_s": 19793.0,
+          "file": "evidence/victim_phone/call_log.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        }
+      ],
+      "digest": "44911dbb73533551a2189e3f4e138227f2e17b91d351f98b16b32daf6203e623",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 41,
+          "rows": 41
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 33,
+          "rows": 33
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 440,
+          "rows": 440
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0041,
+        "cash_found": 40333.33,
+        "cash_truth": 40500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 75000.0,
+        "victim_total_truth": 75000.0
+      },
+      "prediction": {
+        "actual_min": 82.0,
+        "available": true,
+        "error_min": 12.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.6215
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 20
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 65,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9894,
+        "median_error_s": 7.0,
+        "p90_error_s": 8.5
+      },
+      "timings": {
+        "explain": 0.0398,
+        "facts": 0.0226,
+        "intake_and_normalise": 0.0499,
+        "links": 0.0867,
+        "people_and_indicators": 0.0071,
+        "views": 0.0338
+      },
+      "traceability": {
+        "pointers": 67,
+        "resolvable": 67,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.255,
+      "case_id": "HELD-SEXT-06",
+      "class": "sextortion",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 4.3,
+          "estimate_s": 527.0,
+          "file": "evidence/cctv/ATM-NCBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 522.673928
+        },
+        {
+          "detected_timezone": true,
+          "error_s": 4.5,
+          "estimate_s": 19795.5,
+          "file": "evidence/victim_phone/call_log.csv",
+          "kind": "timezone",
+          "method": "anchor_vote",
+          "truth_s": 19800
+        }
+      ],
+      "digest": "f6d9bb8c323fb26e03c6c4c02cd84162fc8fa3d43cb35aa437d4ad1b8d7c10b9",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 44,
+          "rows": 44
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 49,
+          "rows": 49
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 11,
+          "rows": 11
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 31,
+          "rows": 31
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 9,
+          "rows": 9
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "sms": {
+          "coverage": 1.0,
+          "parsed": 13,
+          "rows": 13
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 445,
+          "rows": 445
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0025,
+        "cash_found": 98751.05,
+        "cash_truth": 99000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 123000.0,
+        "victim_total_truth": 123000.0
+      },
+      "prediction": {
+        "actual_min": 56.0,
+        "available": true,
+        "error_min": 14.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 70.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5903,
+          0.5959
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.730769,
+        "fn": 14,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.575758,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sextortion",
+        "class_truth": "sextortion",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 24
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 67,
+        "kendall_tau_after": 0.9998,
+        "kendall_tau_before": 0.9891,
+        "median_error_s": 4.5,
+        "p90_error_s": 4.5
+      },
+      "timings": {
+        "explain": 0.0434,
+        "facts": 0.0185,
+        "intake_and_normalise": 0.0487,
+        "links": 0.1346,
+        "people_and_indicators": 0.0077,
+        "views": 0.0376
+      },
+      "traceability": {
+        "pointers": 70,
+        "resolvable": 70,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.432,
+      "case_id": "HELD-SIM_-01",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 2.9,
+          "estimate_s": -276.0,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -278.866673
+        }
+      ],
+      "digest": "10770bcfe646badbd162c7e0893dfa1c0c2e818840afa3cae4dbd16c9dc1326c",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 15,
+          "rows": 15
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 67,
+          "rows": 67
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 15,
+          "rows": 15
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 84,
+          "rows": 84
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 436,
+          "rows": 436
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0051,
+        "cash_found": 195493.32,
+        "cash_truth": 196500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 234000.0,
+        "victim_total_truth": 234000.0
+      },
+      "prediction": {
+        "actual_min": 72.0,
+        "available": true,
+        "error_min": 7.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5207,
+          0.5208,
+          0.5149,
+          0.52
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 90
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 26,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9446,
+        "median_error_s": 2.9,
+        "p90_error_s": 2.9
+      },
+      "timings": {
+        "explain": 0.045,
+        "facts": 0.0199,
+        "intake_and_normalise": 0.0628,
+        "links": 0.293,
+        "people_and_indicators": 0.0088,
+        "views": 0.0659
+      },
+      "traceability": {
+        "pointers": 189,
+        "resolvable": 189,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.464,
+      "case_id": "HELD-SIM_-02",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 6.3,
+          "estimate_s": 220.0,
+          "file": "evidence/cctv/ATM-IVBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 226.325882
+        }
+      ],
+      "digest": "953cabf64c8d2ace2e48489164e2b911d7d64f71f61ba9fecd298a5469dfc370",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 71,
+          "rows": 71
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 18,
+          "rows": 18
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 94,
+          "rows": 94
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 420,
+          "rows": 420
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0058,
+        "cash_found": 161057.77,
+        "cash_truth": 162000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 206000.0,
+        "victim_total_truth": 206000.0
+      },
+      "prediction": {
+        "actual_min": 84.0,
+        "available": true,
+        "error_min": 19.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5606,
+          0.5599,
+          0.562,
+          0.5601
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 0.994819,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.989691,
+        "tp": 96
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 29,
+        "kendall_tau_after": 0.9951,
+        "kendall_tau_before": 0.9655,
+        "median_error_s": 6.3,
+        "p90_error_s": 6.3
+      },
+      "timings": {
+        "explain": 0.0443,
+        "facts": 0.0212,
+        "intake_and_normalise": 0.0531,
+        "links": 0.3347,
+        "people_and_indicators": 0.0084,
+        "views": 0.0722
+      },
+      "traceability": {
+        "pointers": 201,
+        "resolvable": 201,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.436,
+      "case_id": "HELD-SIM_-03",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 1.6,
+          "estimate_s": 363.5,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 365.138191
+        }
+      ],
+      "digest": "e97d2902208d5b685fe7a10178ea2cddf3e584ba0f3f2f65fc17a8bff39ca68e",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 16,
+          "rows": 16
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 66,
+          "rows": 66
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 16,
+          "rows": 16
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 89,
+          "rows": 89
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 459,
+          "rows": 459
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0055,
+        "cash_found": 183988.65,
+        "cash_truth": 185000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 219000.0,
+        "victim_total_truth": 219000.0
+      },
+      "prediction": {
+        "actual_min": 61.0,
+        "available": true,
+        "error_min": 4.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.4363,
+          0.4448,
+          0.4479,
+          0.4437
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 90
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 27,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.943,
+        "median_error_s": 1.6,
+        "p90_error_s": 1.6
+      },
+      "timings": {
+        "explain": 0.0441,
+        "facts": 0.0196,
+        "intake_and_normalise": 0.0517,
+        "links": 0.3097,
+        "people_and_indicators": 0.0083,
+        "views": 0.0656
+      },
+      "traceability": {
+        "pointers": 189,
+        "resolvable": 189,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.43,
+      "case_id": "HELD-SIM_-04",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 5.4,
+          "estimate_s": 15.0,
+          "file": "evidence/cctv/ATM-CUBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 9.646762
+        }
+      ],
+      "digest": "3e5d8ef835a30f1c6be679c6b250061a0591414661d89f0a90f199eaeadadb20",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 14,
+          "rows": 14
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 60,
+          "rows": 60
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 14,
+          "rows": 14
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 76,
+          "rows": 76
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 445,
+          "rows": 445
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0054,
+        "cash_found": 192951.47,
+        "cash_truth": 194000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 222000.0,
+        "victim_total_truth": 222000.0
+      },
+      "prediction": {
+        "actual_min": 71.0,
+        "available": true,
+        "error_min": 6.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.4804,
+          0.491,
+          0.4851,
+          0.4892
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 82
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 25,
+        "kendall_tau_after": 0.9933,
+        "kendall_tau_before": 0.9933,
+        "median_error_s": 5.4,
+        "p90_error_s": 5.4
+      },
+      "timings": {
+        "explain": 0.0437,
+        "facts": 0.0248,
+        "intake_and_normalise": 0.0629,
+        "links": 0.2851,
+        "people_and_indicators": 0.0087,
+        "views": 0.0595
+      },
+      "traceability": {
+        "pointers": 173,
+        "resolvable": 173,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.476,
+      "case_id": "HELD-SIM_-05",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 1.9,
+          "estimate_s": -142.0,
+          "file": "evidence/cctv/ATM-IVBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": -140.074343
+        }
+      ],
+      "digest": "f2505b38c322a6b15bc69fbe98acc0a3a0a9db17b26b04912c710369bf078f45",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 17,
+          "rows": 17
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 46,
+          "rows": 46
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 54,
+          "rows": 54
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 17,
+          "rows": 17
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 74,
+          "rows": 74
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 435,
+          "rows": 435
+        }
+      },
+      "money": {
+        "cash_error_share": 0.0064,
+        "cash_found": 158979.79,
+        "cash_truth": 160000.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 188000.0,
+        "victim_total_truth": 188000.0
+      },
+      "prediction": {
+        "actual_min": 48.0,
+        "available": true,
+        "error_min": 17.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5962,
+          0.6043,
+          0.5992,
+          0.6022
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 0.993631,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.987342,
+        "tp": 78
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 28,
+        "kendall_tau_after": 0.9947,
+        "kendall_tau_before": 0.9788,
+        "median_error_s": 1.9,
+        "p90_error_s": 1.9
+      },
+      "timings": {
+        "explain": 0.0492,
+        "facts": 0.0299,
+        "intake_and_normalise": 0.0685,
+        "links": 0.3113,
+        "people_and_indicators": 0.0136,
+        "views": 0.0781
+      },
+      "traceability": {
+        "pointers": 164,
+        "resolvable": 164,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.379,
+      "case_id": "HELD-SIM_-06",
+      "class": "sim_swap_takeover",
+      "clock": [
+        {
+          "detected_timezone": false,
+          "error_s": 6.1,
+          "estimate_s": 319.0,
+          "file": "evidence/cctv/ATM-IVBK-JMT-01_dvr_log.csv",
+          "kind": "drift",
+          "method": "anchor_vote",
+          "truth_s": 325.137066
+        }
+      ],
+      "digest": "16a6242f549f0611caa7f75cf8302ba56e28c809a8cfe0456671626596c6f416",
+      "extraction": {
+        "atm_journal": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 45,
+          "rows": 45
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 62,
+          "rows": 62
+        },
+        "cctv_log": {
+          "coverage": 1.0,
+          "parsed": 12,
+          "rows": 12
+        },
+        "cdr": {
+          "coverage": 1.0,
+          "parsed": 85,
+          "rows": 85
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 3,
+          "rows": 3
+        },
+        "kyc_subscriber": {
+          "coverage": 1.0,
+          "parsed": 4,
+          "rows": 4
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        },
+        "tower_dump": {
+          "coverage": 1.0,
+          "parsed": 441,
+          "rows": 441
+        }
+      },
+      "money": {
+        "cash_error_share": 0.007,
+        "cash_found": 143489.77,
+        "cash_truth": 144500.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "victim_total_found": 171000.0,
+        "victim_total_truth": 171000.0
+      },
+      "prediction": {
+        "actual_min": 49.0,
+        "available": true,
+        "error_min": 16.0,
+        "next": "cash_out",
+        "phase": "layering",
+        "phase_correct": true,
+        "predicted_median_min": 65.0
+      },
+      "presence": {
+        "entity_recall": 1.0,
+        "impossibility_recall": null,
+        "links": 1.0,
+        "posteriors": [
+          0.5688,
+          0.5757,
+          0.5713
+        ]
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.808511,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.678571,
+        "tp": 19
+      },
+      "roles": {
+        "cashout_correct": true,
+        "class_correct": true,
+        "class_found": "sim_swap_takeover",
+        "class_truth": "sim_swap_takeover",
+        "mule_l1_correct": true
+      },
+      "same_event": {
+        "f1": 0.975309,
+        "fn": 2,
+        "fp": 2,
+        "precision": 0.975309,
+        "recall": 0.975309,
+        "tp": 79
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 22,
+        "kendall_tau_after": 1.0,
+        "kendall_tau_before": 0.9567,
+        "median_error_s": 6.1,
+        "p90_error_s": 6.1
+      },
+      "timings": {
+        "explain": 0.0489,
+        "facts": 0.0173,
+        "intake_and_normalise": 0.0523,
+        "links": 0.2493,
+        "people_and_indicators": 0.0084,
+        "views": 0.0583
+      },
+      "traceability": {
+        "pointers": 171,
+        "resolvable": 171,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.046,
+      "case_id": "HELD-NO_O-01",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "809e7be4453bf328ef721c189b30c7da29d3be1e6b9535a9991a3707878d787f",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0042,
+        "facts": 0.0051,
+        "intake_and_normalise": 0.0176,
+        "links": 0.0142,
+        "people_and_indicators": 0.0027,
+        "views": 0.0103
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.05,
+      "case_id": "HELD-NO_O-02",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "2bd879e8b1f39e8dd60673a0ed6ed84695bf390df973a9f204ce0b2a45eaf0cc",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0049,
+        "facts": 0.0048,
+        "intake_and_normalise": 0.018,
+        "links": 0.0193,
+        "people_and_indicators": 0.0026,
+        "views": 0.0118
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.051,
+      "case_id": "HELD-NO_O-03",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "41ec74585c5ae0611339f6b9a8a738e715b809327fdd804b9702a76a544e910f",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0045,
+        "facts": 0.0056,
+        "intake_and_normalise": 0.0212,
+        "links": 0.0166,
+        "people_and_indicators": 0.0028,
+        "views": 0.0107
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.047,
+      "case_id": "HELD-NO_O-04",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "444d56fb667f48088da4825321936a3c3b07e56dfabafc6a05f9708b8b5f3fff",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0043,
+        "facts": 0.0055,
+        "intake_and_normalise": 0.0182,
+        "links": 0.0169,
+        "people_and_indicators": 0.0021,
+        "views": 0.0109
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.047,
+      "case_id": "HELD-NO_O-05",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "fa33c0bb3c55b24de48f51d916e7bf5423697cd4599c2e9d0c8e34cac5f327eb",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0043,
+        "facts": 0.0056,
+        "intake_and_normalise": 0.0183,
+        "links": 0.0165,
+        "people_and_indicators": 0.0022,
+        "views": 0.012
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.047,
+      "case_id": "HELD-NO_O-06",
+      "class": "no_offence",
+      "clock": [],
+      "digest": "c1eeb8dc8df80149e3d3f89dee22cefa2f0386f13721b74ea64571c071528cb1",
+      "extraction": {
+        "bank_statement": {
+          "coverage": 1.0,
+          "parsed": 83,
+          "rows": 83
+        },
+        "call_log": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "chat": {
+          "coverage": 1.0,
+          "parsed": 5,
+          "rows": 5
+        },
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "kyc_account": {
+          "coverage": 1.0,
+          "parsed": 2,
+          "rows": 2
+        },
+        "sms": {
+          "coverage": null,
+          "parsed": 0,
+          "rows": 0
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.666667,
+        "tp": 4
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "no_offence",
+        "class_truth": "no_offence"
+      },
+      "same_event": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 3
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.005,
+        "facts": 0.0049,
+        "intake_and_normalise": 0.0184,
+        "links": 0.0161,
+        "people_and_indicators": 0.0021,
+        "views": 0.0105
+      },
+      "traceability": {
+        "pointers": 12,
+        "resolvable": 12,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.249,
+      "case_id": "HELD-UNKN-01",
+      "class": "unknown",
+      "clock": [],
+      "digest": "09326af5de9c6d1a36a0e9a4c71c0fe724d0faa1f0b04b97c165d8571e255131",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1374,
+          "rows": 1374
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0053,
+        "facts": 0.0346,
+        "intake_and_normalise": 0.0663,
+        "links": 0.0219,
+        "people_and_indicators": 0.1196,
+        "views": 0.0077
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.136,
+      "case_id": "HELD-UNKN-02",
+      "class": "unknown",
+      "clock": [],
+      "digest": "0ac216446c7a93b73557f75a62cf1e483a7871c37d2ea022d113fa63391e0de6",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1369,
+          "rows": 1369
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0053,
+        "facts": 0.0229,
+        "intake_and_normalise": 0.0559,
+        "links": 0.0156,
+        "people_and_indicators": 0.0339,
+        "views": 0.0087
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.132,
+      "case_id": "HELD-UNKN-03",
+      "class": "unknown",
+      "clock": [],
+      "digest": "af3fc814386a7c27136ac862b4a94233dfcf3c332f56e08fec3b9b96b2eabd8e",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1374,
+          "rows": 1374
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0054,
+        "facts": 0.024,
+        "intake_and_normalise": 0.054,
+        "links": 0.0156,
+        "people_and_indicators": 0.031,
+        "views": 0.0074
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.135,
+      "case_id": "HELD-UNKN-04",
+      "class": "unknown",
+      "clock": [],
+      "digest": "e82b1d40e88c063f3df79f713efe882fb37fce35eb57b3a48059907ed2631b60",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1394,
+          "rows": 1394
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0053,
+        "facts": 0.0235,
+        "intake_and_normalise": 0.0579,
+        "links": 0.0152,
+        "people_and_indicators": 0.0308,
+        "views": 0.0074
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.136,
+      "case_id": "HELD-UNKN-05",
+      "class": "unknown",
+      "clock": [],
+      "digest": "faab7fd555b70be65f2393c2f79cc69da34c1b4da3a91121e1b6f605fb7254f5",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1379,
+          "rows": 1379
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.0049,
+        "facts": 0.0238,
+        "intake_and_normalise": 0.0579,
+        "links": 0.0138,
+        "people_and_indicators": 0.0333,
+        "views": 0.0071
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    },
+    {
+      "analysis_s": 0.176,
+      "case_id": "HELD-UNKN-06",
+      "class": "unknown",
+      "clock": [],
+      "digest": "d1a650909a45938fef54cce9152134636069fd2cf5ef2c8edea9594dafd15a96",
+      "extraction": {
+        "complaint": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "email": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        },
+        "net_conn": {
+          "coverage": 1.0,
+          "parsed": 1396,
+          "rows": 1396
+        },
+        "uniaethel": {
+          "coverage": 1.0,
+          "parsed": 1,
+          "rows": 1
+        }
+      },
+      "money": {
+        "cash_error_share": null,
+        "cash_found": 0,
+        "cash_truth": 0.0,
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "victim_total_found": 0.0,
+        "victim_total_truth": 0.0
+      },
+      "prediction": null,
+      "presence": {
+        "entity_recall": null,
+        "impossibility_recall": null,
+        "links": null,
+        "posteriors": []
+      },
+      "resolution": {
+        "decoy_merges": 0,
+        "decoy_pairs": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "roles": {
+        "class_correct": true,
+        "class_found": "unknown",
+        "class_truth": "unknown"
+      },
+      "same_event": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "tamper": {
+        "caught": 0,
+        "expected": 0,
+        "false_alarms": 0
+      },
+      "timeline": {
+        "events": 1
+      },
+      "timings": {
+        "explain": 0.005,
+        "facts": 0.0312,
+        "intake_and_normalise": 0.0882,
+        "links": 0.0177,
+        "people_and_indicators": 0.031,
+        "views": 0.0076
+      },
+      "traceability": {
+        "pointers": 1,
+        "resolvable": 1,
+        "share": 1.0
+      }
+    }
+  ],
+  "determinism": {
+    "digest": "dde08e311b18209080621185519594a3a707eb0e6cf900e44a2ed7009bc041ec",
+    "identical": true
+  },
+  "engine": "1.0.0",
+  "generated": "2026-11-23",
+  "heldout": {
+    "analysis_time_s": {
+      "max": 0.572,
+      "median": 0.252
+    },
+    "calibration": [
+      {
+        "band": "W below 0",
+        "by_type": {
+          "co_presence": 6616,
+          "same_actor": 39
+        },
+        "links": 6655,
+        "true_share": 0.0
+      },
+      {
+        "band": "W 0 to 1",
+        "by_type": {
+          "co_presence": 3232
+        },
+        "links": 3232,
+        "true_share": 0.0
+      },
+      {
+        "band": "W 1 to 2",
+        "by_type": {
+          "co_presence": 1287,
+          "same_actor": 13,
+          "same_event": 5
+        },
+        "links": 1305,
+        "true_share": 0.0138
+      },
+      {
+        "band": "W 2 to 3",
+        "by_type": {
+          "co_presence": 2,
+          "same_actor": 78,
+          "same_event": 316
+        },
+        "links": 396,
+        "true_share": 0.9949
+      },
+      {
+        "band": "W 3 to 4",
+        "by_type": {
+          "co_presence": 42,
+          "same_actor": 8,
+          "same_event": 395
+        },
+        "links": 445,
+        "true_share": 1.0
+      },
+      {
+        "band": "W 4 and above",
+        "by_type": {
+          "co_presence": 13,
+          "same_event": 158
+        },
+        "links": 171,
+        "true_share": 1.0
+      }
+    ],
+    "cases": 30,
+    "classification": {
+      "accuracy": 1.0,
+      "confusion": {
+        "no_offence": {
+          "no_offence": 6
+        },
+        "sextortion": {
+          "sextortion": 6
+        },
+        "sim_swap_takeover": {
+          "sim_swap_takeover": 6
+        },
+        "unknown": {
+          "unknown": 6
+        },
+        "upi_investment_fraud": {
+          "upi_investment_fraud": 6
+        }
+      }
+    },
+    "clock": {
+      "files": 24,
+      "max_error_s": 9.9,
+      "median_error_s": 5.75,
+      "timezone_cases": 6,
+      "timezone_detected": 6
+    },
+    "extraction": {
+      "atm_journal": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "bank_statement": {
+        "files": 24,
+        "mean_coverage": 1.0
+      },
+      "call_log": {
+        "files": 24,
+        "mean_coverage": 1.0
+      },
+      "cctv_log": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "cdr": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "chat": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "cloud_location": {
+        "files": 3,
+        "mean_coverage": 1.0
+      },
+      "complaint": {
+        "files": 30,
+        "mean_coverage": 1.0
+      },
+      "email": {
+        "files": 12,
+        "mean_coverage": 1.0
+      },
+      "kyc_account": {
+        "files": 24,
+        "mean_coverage": 1.0
+      },
+      "kyc_subscriber": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "net_conn": {
+        "files": 10,
+        "mean_coverage": 1.0
+      },
+      "seizure_memo": {
+        "files": 4,
+        "mean_coverage": 1.0
+      },
+      "sms": {
+        "files": 12,
+        "mean_coverage": 1.0
+      },
+      "tower_dump": {
+        "files": 18,
+        "mean_coverage": 1.0
+      },
+      "uniaethel": {
+        "files": 10,
+        "mean_coverage": 1.0
+      }
+    },
+    "money": {
+      "cash_error_share": 0.0055,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "prediction": {
+      "cases": 18,
+      "median_error_min": 12.0,
+      "phase_accuracy": 1.0
+    },
+    "presence": {
+      "entity_recall": 1.0,
+      "impossibility_recall": 1.0,
+      "link_precision": 1.0,
+      "median_posterior": 0.5903
+    },
+    "resolution": {
+      "decoy_merges": 0,
+      "decoy_pairs": 20,
+      "f1": 0.8315,
+      "precision": 1.0,
+      "recall": 0.7241
+    },
+    "roles": {
+      "cashout_accuracy": 1.0,
+      "mule_l1_accuracy": 1.0,
+      "variant_accuracy": 1.0
+    },
+    "same_event": {
+      "precision": 0.999,
+      "recall": 0.9926
+    },
+    "tamper": {
+      "caught": 4,
+      "expected": 4,
+      "false_alarms": 0
+    },
+    "timeline": {
+      "kendall_tau_after": 0.9983,
+      "kendall_tau_before": 0.9749,
+      "median_error_s": 5.0278
+    },
+    "traceability": {
+      "pointers": 2268,
+      "share": 1.0
+    }
+  },
+  "note": "All cases are synthetic and generated with answer keys. The engine never reads the answer keys. Held-out cases use seeds and structures not used while building the engine.",
+  "scaling": [
+    {
+      "decision": "upi_investment_fraud",
+      "entities": 1271,
+      "observations": 3063,
+      "scale": 1.0,
+      "seconds": 0.549
+    },
+    {
+      "decision": "upi_investment_fraud",
+      "entities": 5118,
+      "observations": 5644,
+      "scale": 5.0,
+      "seconds": 0.996
+    },
+    {
+      "decision": "upi_investment_fraud",
+      "entities": 19515,
+      "observations": 15137,
+      "scale": 20.0,
+      "seconds": 2.656
+    }
+  ]
+}

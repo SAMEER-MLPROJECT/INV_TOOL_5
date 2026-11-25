@@ -1,0 +1,596 @@
+{
+  "class": "upi_investment_fraud",
+  "clock": {
+    "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv": {
+      "kind": "drift",
+      "offset_s": -420.0
+    },
+    "evidence/victim_phone/call_log.csv": {
+      "kind": "timezone",
+      "offset_s": 19800
+    },
+    "evidence/victim_phone/sms.csv": {
+      "kind": "timezone",
+      "offset_s": 19800
+    }
+  },
+  "co_presence": [
+    {
+      "entity": "phone:+917227918058",
+      "events": [
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          11
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          12
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          13
+        ]
+      ]
+    },
+    {
+      "entity": "cloud:ankit.95@mail.test",
+      "events": [
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          11
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          12
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          13
+        ]
+      ]
+    }
+  ],
+  "decoy_pairs": [
+    [
+      "phone:+917227918058",
+      "account:GGBK0821149:3744284321057"
+    ],
+    [
+      "phone:+917227918058",
+      "phone:+918504000883"
+    ],
+    [
+      "phone:+917227918058",
+      "account:NCBK0289945:3552658675556"
+    ],
+    [
+      "phone:+917227918058",
+      "phone:+919589481131"
+    ]
+  ],
+  "events": [
+    {
+      "phase": "contact",
+      "ref": [
+        "evidence/victim_phone/whatsapp_chat_8862057986.txt",
+        2
+      ],
+      "time": 1790053320.0
+    },
+    {
+      "phase": "lure",
+      "ref": [
+        "evidence/email/lure_offer.eml",
+        1
+      ],
+      "time": 1790143560.0
+    },
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_245142.csv",
+        37
+      ],
+      "time": 1790496000.0
+    },
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_245142.csv",
+        38
+      ],
+      "time": 1790496626.0
+    },
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_245142.csv",
+        39
+      ],
+      "time": 1790497605.0
+    },
+    {
+      "phase": "layering",
+      "ref": [
+        "evidence/bank/statement_169849.csv",
+        6
+      ],
+      "time": 1790498088.0
+    },
+    {
+      "phase": "layering",
+      "ref": [
+        "evidence/bank/statement_169849.csv",
+        7
+      ],
+      "time": 1790498400.0
+    },
+    {
+      "phase": "cash_out",
+      "ref": [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        11
+      ],
+      "time": 1790503740.0
+    },
+    {
+      "phase": "cash_out",
+      "ref": [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        12
+      ],
+      "time": 1790503823.0
+    },
+    {
+      "phase": "cash_out",
+      "ref": [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        13
+      ],
+      "time": 1790503911.0
+    },
+    {
+      "phase": "control",
+      "ref": [
+        "evidence/network/router_conn_log.csv",
+        13
+      ],
+      "time": 1790051760.0
+    }
+  ],
+  "generator": {
+    "fixed": true,
+    "kind": "upi_investment_fraud",
+    "scale": 1.0,
+    "seed": 7
+  },
+  "impossible": [
+    {
+      "entity": "phone:+919589481131",
+      "events": [
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          11
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          12
+        ],
+        [
+          "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+          13
+        ]
+      ]
+    }
+  ],
+  "money": {
+    "cash_account": "account:NCBK0656883:3671374914457",
+    "cash_atm": "ATM-NCBK-NOI-01",
+    "cash_withdrawn": 115000.0,
+    "first_cash_time": 1790503740.0,
+    "layering_time": 1790498088.0,
+    "tainted_accounts": [
+      "account:IVBK0120429:5372509169849",
+      "account:NCBK0289945:3552658675556",
+      "account:NCBK0656883:3671374914457",
+      "account:IVBK0977645:2618651159910"
+    ],
+    "victim_total": 281000.0
+  },
+  "persons": {
+    "decoy_d2": [
+      "account:GGBK0821149:3744284321057",
+      "upi:rohitk@ggb",
+      "phone:+918504000883",
+      "imsi:404187371678684"
+    ],
+    "mule_a": [
+      "account:IVBK0120429:5372509169849",
+      "upi:tradex.support@ivb",
+      "phone:+917427316723",
+      "imsi:404126865635515"
+    ],
+    "mule_b": [
+      "account:NCBK0289945:3552658675556",
+      "upi:rohit5007@ncb",
+      "phone:+919589481131",
+      "imsi:404114402426462"
+    ],
+    "mule_c": [
+      "account:NCBK0656883:3671374914457",
+      "upi:pooja8203@ncb",
+      "phone:+918193141705",
+      "imsi:404186492083124"
+    ],
+    "suspect": [
+      "phone:+918862057986",
+      "phone:+917227918058",
+      "imsi:404182828807290",
+      "imsi:404188718033401",
+      "imei:358780175989834",
+      "imei:354788783848379",
+      "mac:3c:52:82:46:d5:3e",
+      "host:desktop-2198d",
+      "mac:a4:50:46:25:7b:db",
+      "cloud:ankit.95@mail.test"
+    ],
+    "victim": [
+      "phone:+919516761222",
+      "imsi:404102972997528",
+      "account:IVBK0323115:4742217245142",
+      "upi:meera.iyer@ivb",
+      "email:meera.iyer@mail.test"
+    ]
+  },
+  "roles": {
+    "cashout": "suspect",
+    "controller": "suspect",
+    "lurer": "suspect",
+    "mule_l1": [
+      "mule_a"
+    ],
+    "mule_l2": [
+      "mule_b",
+      "mule_c"
+    ],
+    "victim": "victim"
+  },
+  "same_event": [
+    [
+      [
+        "evidence/telecom/cdr_918862057986.csv",
+        65
+      ],
+      [
+        "evidence/victim_phone/call_log.csv",
+        45
+      ]
+    ],
+    [
+      [
+        "evidence/telecom/cdr_918862057986.csv",
+        71
+      ],
+      [
+        "evidence/victim_phone/call_log.csv",
+        50
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        11
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        11
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        12
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        12
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        13
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        13
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        6
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        6
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        17
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        17
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        19
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        19
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        8
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        8
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        18
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        18
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        10
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        10
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        7
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        7
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        20
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        20
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        15
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        15
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        16
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        16
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        9
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        9
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        3
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        2
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        2
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        3
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        5
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        5
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        14
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        14
+      ]
+    ],
+    [
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        4
+      ],
+      [
+        "evidence/cctv/ATM-NCBK-NOI-01_dvr_log.csv",
+        4
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        37
+      ],
+      [
+        "evidence/bank/statement_169849.csv",
+        3
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        37
+      ],
+      [
+        "evidence/victim_phone/sms.csv",
+        12
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        38
+      ],
+      [
+        "evidence/bank/statement_169849.csv",
+        4
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        38
+      ],
+      [
+        "evidence/victim_phone/sms.csv",
+        13
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        39
+      ],
+      [
+        "evidence/bank/statement_169849.csv",
+        5
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_245142.csv",
+        39
+      ],
+      [
+        "evidence/victim_phone/sms.csv",
+        14
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_169849.csv",
+        6
+      ],
+      [
+        "evidence/bank/statement_675556.csv",
+        16
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_169849.csv",
+        7
+      ],
+      [
+        "evidence/bank/statement_914457.csv",
+        3
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_914457.csv",
+        4
+      ],
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        11
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_914457.csv",
+        5
+      ],
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        12
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_914457.csv",
+        6
+      ],
+      [
+        "evidence/bank/atm_journal_ATM-NCBK-NOI-01.csv",
+        13
+      ]
+    ]
+  ],
+  "seed_identifiers": [
+    {
+      "type": "phone",
+      "value": "+919516761222"
+    },
+    {
+      "type": "account",
+      "value": "IVBK0323115:4742217245142"
+    }
+  ],
+  "tampered": [
+    "evidence/cctv/frames/ATM-NCBK-NOI-01_002.png"
+  ],
+  "variants": {
+    "mule_l1": "knowing"
+  }
+}

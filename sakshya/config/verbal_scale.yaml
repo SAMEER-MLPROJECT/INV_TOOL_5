@@ -1,0 +1,14 @@
+reference: "Example verbal scale, ENFSI Guideline for Evaluative Reporting in Forensic Science (2015), Guidance Note 4. Confirm the bands against the guideline before formal use."
+support:
+  - {max_lr: 1.0, label: "No support either way"}
+  - {max_lr: 10.0, label: "Weak support"}
+  - {max_lr: 100.0, label: "Moderate support"}
+  - {max_lr: 1000.0, label: "Moderately strong support"}
+  - {max_lr: 10000.0, label: "Strong support"}
+  - {max_lr: 1000000.0, label: "Very strong support"}
+  - {max_lr: 1.0e+300, label: "Extremely strong support"}
+against:
+  - {max_lr: 10.0, label: "Weak support for the alternative"}
+  - {max_lr: 100.0, label: "Moderate support for the alternative"}
+  - {max_lr: 1000.0, label: "Moderately strong support for the alternative"}
+  - {max_lr: 1.0e+300, label: "Strong support for the alternative"}

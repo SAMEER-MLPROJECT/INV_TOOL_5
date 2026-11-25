@@ -1,0 +1,7 @@
+source: statement
+label: Recorded statement
+reference: false
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M"
+sigma_s: 1800
+columns: {}

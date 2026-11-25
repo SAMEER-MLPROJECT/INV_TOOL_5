@@ -1,0 +1,87 @@
+{
+  "class": "no_offence",
+  "clock": {},
+  "co_presence": [],
+  "decoy_pairs": [],
+  "events": [
+    {
+      "phase": "payment",
+      "ref": [
+        "evidence/bank/statement_576705.csv",
+        38
+      ],
+      "time": 1789972500.0
+    }
+  ],
+  "generator": {
+    "fixed": false,
+    "kind": "no_offence",
+    "scale": 1.0,
+    "seed": 59
+  },
+  "impossible": [],
+  "money": {
+    "cash_withdrawn": 0.0,
+    "tainted_accounts": [],
+    "victim_total": 0.0
+  },
+  "persons": {
+    "merchant": [
+      "phone:+918224466798",
+      "account:NCBK0343040:5799362812261",
+      "upi:guptastore@ncb"
+    ],
+    "victim": [
+      "phone:+917573941000",
+      "account:CUBK0362619:3249400576705",
+      "upi:neha3236@cub"
+    ]
+  },
+  "roles": {
+    "victim": "victim"
+  },
+  "same_event": [
+    [
+      [
+        "evidence/bank/statement_576705.csv",
+        2
+      ],
+      [
+        "evidence/bank/statement_812261.csv",
+        2
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_576705.csv",
+        7
+      ],
+      [
+        "evidence/bank/statement_812261.csv",
+        15
+      ]
+    ],
+    [
+      [
+        "evidence/bank/statement_576705.csv",
+        38
+      ],
+      [
+        "evidence/bank/statement_812261.csv",
+        46
+      ]
+    ]
+  ],
+  "seed_identifiers": [
+    {
+      "type": "phone",
+      "value": "+917573941000"
+    },
+    {
+      "type": "account",
+      "value": "CUBK0362619:3249400576705"
+    }
+  ],
+  "tampered": [],
+  "variants": {}
+}

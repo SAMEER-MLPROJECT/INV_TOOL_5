@@ -1,0 +1,38 @@
+clock:
+  reference_priority: [bank_statement, atm_journal, cdr, tower_dump]
+  vote_tolerance_s: 90
+  max_offset_s: 50400
+  min_anchors: 3
+  timezone_snap_s: 150
+  drift_min_span_days: 3
+
+links:
+  cap_per_source: 4.0
+  accept_w: 2.0
+  min_positive_sources: 2
+  merge_w: 2.0
+  impossibility_w: -6.0
+  speed_kmh: 120
+  copresence_window_s: 1200
+  copresence_distance_m: 3000
+  copresence_area_radius_m: 5000
+  case_link_depth: 2
+
+money:
+  default_policy: pro_rata
+  new_payee_days: 30
+
+explain:
+  tau: 2.0
+  margin: 1.0
+  beam_width: 20
+  branch: 3
+  order_penalty: -2.0
+  suspicious_floor: 0.8
+
+predict:
+  freeze_latency_min: 45
+  horizons_min: [15, 30, 60, 120]
+
+decide:
+  max_leads: 12

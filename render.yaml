@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sakshya
+    runtime: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn sakshya.api.app:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: SAKSHYA_WORKSPACE
+        value: /opt/render/project/src/workspace

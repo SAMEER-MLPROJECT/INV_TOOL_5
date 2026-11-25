@@ -1,0 +1,4 @@
+item_id,seized_time,premises,premises_lat,premises_lon,item_type,description,imei,msisdn,imsi,mac,hostname,officer
+S-01,06.10.2026 11:20,"H.No. 255, Block C, Sector 18, Noida, Uttar Pradesh",28.58528,77.326707,laptop,"Black laptop, charger",,,,3c:52:82:46:d5:3e,DESKTOP-2198D,SI R. Meena
+S-02,06.10.2026 11:25,"H.No. 255, Block C, Sector 18, Noida, Uttar Pradesh",28.58528,77.326707,mobile phone,Android handset with one SIM,358780175989834,+917227918058,404188718033401,a4:50:46:25:7b:db,,SI R. Meena
+S-03,06.10.2026 11:30,"H.No. 255, Block C, Sector 18, Noida, Uttar Pradesh",28.58528,77.326707,router,"Wi-Fi router, power adapter",,,,c4:6e:1f:c8:e2:a1,,SI R. Meena

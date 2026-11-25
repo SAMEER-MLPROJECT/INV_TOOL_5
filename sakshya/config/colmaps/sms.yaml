@@ -1,0 +1,12 @@
+source: sms
+label: Phone SMS export
+reference: false
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M:%S"
+sigma_s: 120
+clock_domain: export
+columns:
+  time: timestamp
+  sender: sender
+  direction: direction
+  body: body

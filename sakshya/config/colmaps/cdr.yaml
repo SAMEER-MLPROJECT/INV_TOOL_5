@@ -1,0 +1,16 @@
+source: cdr
+label: Call detail records
+reference: true
+timezone: "+05:30"
+time_format: "%Y-%m-%d %H:%M:%S"
+sigma_s: 2
+columns:
+  record_id: record_id
+  time: start_time
+  msisdn: msisdn
+  other: other_party
+  call_type: call_type
+  duration: duration_s
+  imei: imei
+  imsi: imsi
+  cell: cell_id

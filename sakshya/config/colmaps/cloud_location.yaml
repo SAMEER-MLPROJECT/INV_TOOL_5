@@ -1,0 +1,5 @@
+source: cloud_location
+label: Cloud location history
+reference: false
+sigma_s: 30
+columns: {}

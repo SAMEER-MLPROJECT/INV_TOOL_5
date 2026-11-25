@@ -1,0 +1,9 @@
+{
+  "engine": "1.0.0",
+  "fitted_on": "8 training cases",
+  "log_loss": 0.0104,
+  "log_loss_unscaled": 0.0179,
+  "scales": {
+    "co_presence": 0.687
+  }
+}

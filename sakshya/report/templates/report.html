@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case report {{ data.case.id }}</title>
+<style>
+  :root { --ink: #1b1f24; --muted: #59616b; --line: #d7dbe0; --soft: #f4f6f8; --accent: #1d4e89; --good: #1f7a4d; --bad: #a3271f; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); margin: 0; background: #fff; font-size: 13.5px; line-height: 1.5; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 28px 60px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 22px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 28px 0 10px; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+  h3 { font-size: 14px; margin: 16px 0 6px; }
+  .meta { color: var(--muted); font-size: 12.5px; }
+  .meta span { margin-right: 16px; }
+  .verdict { background: var(--soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 12px 0; }
+  .verdict strong { font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 12.5px; }
+  th, td { border: 1px solid var(--line); padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  code, .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 11.5px; word-break: break-all; }
+  .pill { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11.5px; background: #e6ecf3; color: var(--accent); margin-right: 4px; }
+  .pill.bad { background: #f6e3e1; color: var(--bad); }
+  .pill.good { background: #e2f1e8; color: var(--good); }
+  .note { color: var(--muted); font-size: 12px; }
+  .term { color: var(--muted); }
+  .footer { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 11.5px; color: var(--muted); }
+  @media print { main { padding: 0; } h2 { break-after: avoid; } table { break-inside: auto; } tr { break-inside: avoid; } .noprint { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Investigation report: {{ data.case.title }}</h1>
+  <div class="meta">
+    <span>Case {{ data.case.id }}</span>
+    <span>Prepared {{ generated }} IST</span>
+    <span>Engine Sakshya {{ version }}</span>
+    <span>Analysis digest <code>{{ data.digest[:16] }}</code></span>
+  </div>
+  <div class="meta">
+    <span>Custody ledger: {{ data.evidence.ledger.entries }} entries, {% if data.evidence.ledger.ok %}<span class="pill good">chain verified</span>{% else %}<span class="pill bad">chain broken at entry {{ data.evidence.ledger.broken_at }}</span>{% endif %}</span>
+    <span>Ledger head <code>{{ data.evidence.ledger.head[:16] }}</code></span>
+  </div>
+  <p class="noprint note">Use the browser's print option to save this report as PDF.</p>
+</header>
+
+<section>
+  <h2>1. Conclusion</h2>
+  <div class="verdict">
+    <strong>{{ data.decision.title }}</strong><br>
+    {{ data.decision.reason }}.
+    {% if crime %}Evidence weight S = {{ "%.1f"|format(crime.score) }}, {{ "%.1f"|format(data.decision.margin) }} above the next explanation.{% endif %}
+  </div>
+  <p class="note">Scores are sums of base-10 log likelihood ratios. They express how much better one explanation fits the evidence than another. They are not probabilities of guilt. Findings are investigative leads for officers to verify.</p>
+</section>
+
+{% if crime %}
+<section>
+  <h2>2. Reconstruction</h2>
+  <table>
+    <tr><th>Phase</th><th>First event</th><th>Last event</th><th class="num">Events</th><th>Status</th></tr>
+    {% for phase in crime.phases %}
+    <tr>
+      <td>{{ phase.label }}</td>
+      <td>{{ phase.t_first|ist }}</td>
+      <td>{{ phase.t_last|ist }}</td>
+      <td class="num">{{ phase.event_count }}</td>
+      <td>{% if phase.filled %}{% if phase.order_ok %}<span class="pill good">evidenced</span>{% else %}<span class="pill bad">out of order</span>{% endif %}{% elif phase.optional %}<span class="pill">not evidenced (optional)</span>{% else %}<span class="pill bad">gap</span> observability {{ phase.observability|pct }}{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% for block in phase_events %}
+    {% if block.events %}
+    <h3>{{ block.phase.label }}</h3>
+    <table>
+      <tr><th>Time (corrected)</th><th>Record</th><th>Source</th></tr>
+      {% for ev in block.events %}
+      <tr>
+        <td>{{ ev.t_display }}{% if ev.t_raw_display and ev.t_raw_display != ev.t_display %}<br><span class="note">as recorded {{ ev.t_raw_display }}</span>{% endif %}</td>
+        <td><code>{{ ev.raw[:220] }}</code></td>
+        <td>{{ ev.evidence_id }} {{ ev.file }}, row {{ ev.row }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  {% endfor %}
+</section>
+
+<section>
+  <h2>3. Key people and accounts</h2>
+  <table>
+    <tr><th>Role</th><th>Bound to</th><th>Identifiers</th><th class="num">Role weight</th></tr>
+    {% for role in crime.roles %}
+    <tr>
+      <td>{{ role.label }}{% if role.variant %} ({{ role.variant }}){% endif %}</td>
+      <td>{% for unit in role.units %}{{ unit.id }} {{ unit.label }}{% if unit.names %} <span class="note">registered as {{ unit.names|join(", ") }}</span>{% endif %}<br>{% else %}<span class="note">not identified</span>{% endfor %}</td>
+      <td>{% for unit in role.units %}{% for ident in unit.identifiers or [] %}<code>{{ ident|show }}</code> {% endfor %}{% endfor %}</td>
+      <td class="num">{{ role.score|w }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+
+<section>
+  <h2>4. Links relied on</h2>
+  <p class="note">Each link was tested against coincidence. W is the base-10 log likelihood ratio; the verbal scale follows the example in the ENFSI evaluative reporting guideline (2015). Posterior values use the stated prior and the calibrated weight.</p>
+  <table>
+    <tr><th>Claim</th><th class="num">W</th><th>Strength</th><th>Basis</th></tr>
+    {% for link in relied %}
+    <tr>
+      <td>{{ link.claim }}{% for term in link.terms %}<br><span class="term">{{ term.name }} {{ term.w|w }}: {{ term.detail }}</span>{% endfor %}{% if link.posterior %}<br><span class="term">Posterior {{ link.posterior|pct }} from prior odds 1 : {{ (1 / link.prior_odds)|round|int }}</span>{% endif %}</td>
+      <td class="num">{{ link.w|w }}</td>
+      <td>{{ link.verbal }}<br><span class="pill">{{ link.status }}</span></td>
+      <td>{% for obs in link.basis %}<code>{{ obs }}</code><br>{% endfor %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+{% endif %}
+
+<section>
+  <h2>5. Money trail and freeze list</h2>
+  <p>Traced from the complainant: {{ data.reach.trace.victim_out|inr }} ({{ data.reach.policy|replace("_", "-") }} attribution), as of {{ data.reach.as_of|ist }}.</p>
+  <table>
+    <tr><th>Account</th><th class="num">Hop</th><th class="num">Received</th><th class="num">Sent on</th><th class="num">Cash</th><th class="num">Still held</th></tr>
+    {% for acc in data.reach.trace.accounts %}
+    <tr><td><code>{{ acc.account|show }}</code></td><td class="num">{{ acc.hop }}</td><td class="num">{{ acc.tainted_in|inr }}</td><td class="num">{{ acc.tainted_out|inr }}</td><td class="num">{{ acc.tainted_cash|inr }}</td><td class="num">{{ acc.tainted_held|inr }}</td></tr>
+    {% endfor %}
+  </table>
+  {% if data.reach.freeze %}
+  <h3>Freeze priority</h3>
+  <table>
+    <tr><th class="num">Rank</th><th>Account</th><th class="num">Held</th><th class="num">Expected recoverable</th><th>Action</th></tr>
+    {% for row in data.reach.freeze %}
+    <tr><td class="num">{{ row.rank }}</td><td><code>{{ row.label }}</code></td><td class="num">{{ row.held|inr }}</td><td class="num">{{ row.expected_recoverable|inr }}</td><td>{{ row.action }}</td></tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</section>
+
+<section>
+  <h2>6. Alternatives considered and people cleared</h2>
+  <table>
+    <tr><th>Explanation</th><th>Who is bound to each role</th><th class="num">S</th><th>Gaps</th></tr>
+    {% for h in alternatives %}
+    <tr><td>{{ h.id }} {{ h.label }}{% if h.variant %} {% for k, v in h.variant.items() %}({{ v }}){% endfor %}{% endif %}</td><td>{% for r in h.roles if r.units and r.name != "victim" %}{{ r.label }}: {% for u in r.units %}{{ u.id if u.kind == "person" else u.label }}{% if not loop.last %}, {% endif %}{% endfor %}{% if not loop.last %}; {% endif %}{% else %}none{% endfor %}</td><td class="num">{{ "%.1f"|format(h.score) }}</td><td>{{ h.gaps|join(", ")|replace("_", " ") or "none" }}</td></tr>
+    {% endfor %}
+  </table>
+  {% if cleared %}
+  <h3>Cleared by the travel-time test</h3>
+  <ul>{% for link in cleared %}<li>{{ link.claim }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if rejected %}
+  <h3>Links rejected by the investigator</h3>
+  <ul>{% for link in rejected %}<li>{{ link.claim }}: {{ link.note }}</li>{% endfor %}</ul>
+  {% endif %}
+</section>
+
+<section>
+  <h2>7. Recommended requests</h2>
+  <table>
+    <tr><th class="num">Rank</th><th>Request</th><th>Why</th><th class="num">Days</th></tr>
+    {% for lead in data.leads %}
+    <tr><td class="num">{{ lead.rank }}</td><td>{{ lead.title }}</td><td>{{ lead.why }}{% if lead.reasons %}; {{ lead.reasons|join("; ") }}{% endif %}</td><td class="num">{{ lead.days }}</td></tr>
+    {% endfor %}
+  </table>
+  {% if data.fragility.available %}
+  <h3>What the conclusion rests on</h3>
+  <p>{{ data.fragility.message }}.</p>
+  {% if data.fragility.rests_on %}<ul>{% for item in data.fragility.rests_on %}<li>{{ item.label }} ({{ item.w|w }})</li>{% endfor %}</ul>{% endif %}
+  <p class="note">These are the items a defence would challenge first. Strengthen them with independent records before relying on the conclusion.</p>
+  {% endif %}
+</section>
+
+{% if data.actions %}
+<section>
+  <h2>8. Investigator decisions</h2>
+  <table>
+    <tr><th>Time</th><th>Decision</th><th>Target</th><th>Reason</th></tr>
+    {% for a in data.actions %}
+    <tr><td>{{ a.time|ist }}</td><td>{{ a.type|replace("_", " ") }}</td><td><code>{{ a.target }}</code></td><td>{{ a.reason }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+{% endif %}
+
+<section>
+  <h2>Annex A. Electronic records and hash values</h2>
+  <p class="note">Prepared to support a certificate under Section 63(4) of the Bharatiya Sakshya Adhiniyam, 2023 (Part A, hash disclosure). Part B must be completed by a person qualified to certify; this annex does not replace it.</p>
+  <table>
+    <tr><th>ID</th><th>File</th><th>Type</th><th class="num">Bytes</th><th>SHA-256</th><th>Ledger entry</th><th>Integrity</th></tr>
+    {% for item in data.evidence["items"] %}
+    <tr>
+      <td>{{ item.evidence_id }}</td><td>{{ item.file }}</td><td>{{ item.label }}</td><td class="num">{{ item.size }}</td>
+      <td><code>{{ item.sha256 }}</code></td><td class="num">{{ intake_seq.get(item.file, "") }}</td>
+      <td>{% for flag in item.integrity %}<span class="pill bad">{{ flag.message }}</span>{% else %}<span class="pill good">no issue</span>{% endfor %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+
+<section>
+  <h2>Annex B. Clock corrections</h2>
+  <table>
+    <tr><th>ID</th><th>Method</th><th class="num">Offset applied</th><th class="num">Uncertainty</th><th class="num">Anchors</th><th>Note</th></tr>
+    {% for item in data.evidence["items"] %}{% if item.clock and item.clock.method != "declared" and item.clock.method != "reference" %}
+    <tr><td>{{ item.evidence_id }}</td><td>{{ item.clock.method|replace("_", " ") }}</td><td class="num">{{ "%.0f"|format(item.clock.offset_s) }} s</td><td class="num">{{ "%.0f"|format(item.clock.sigma_s) }} s</td><td class="num">{{ item.clock.anchors }}</td><td>{{ item.clock.note }}</td></tr>
+    {% endif %}{% endfor %}
+  </table>
+</section>
+
+<div class="footer">
+  Generated by Sakshya {{ version }} from the evidence listed in Annex A. Every statement above links to an evidence record by file, row and SHA-256 hash. Results on synthetic data are labelled as such in the evaluation report.
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+source: kyc_subscriber
+label: Subscriber KYC
+reference: false
+timezone: "+05:30"
+time_format: "%Y-%m-%d"
+sigma_s: 86400
+columns:
+  msisdn: msisdn
+  imsi: imsi
+  name: subscriber_name
+  address: address
+  document: id_document
+  time: activation_date

@@ -1,0 +1,44 @@
+class: sextortion
+label: Sextortion
+summary: Victim recorded or tricked on a video call, threatened with exposure, and pays mule accounts.
+prior_log10: -0.8
+roles:
+  - name: victim
+    label: Complainant
+    find: seed
+  - name: extortionist
+    label: Extortionist
+    find: contacted_seed
+    supports: [threat_language, contact_before_payment]
+    contradicts: [lure_language]
+  - name: mule_l1
+    label: First-layer mule
+    kind: account
+    find: first_hop_accounts
+    supports: [received_from_victim, pass_through_fast, pass_through_partial, split_out, new_account]
+    contradicts: [funds_retained, long_history_with_payee]
+  - name: mule_l2
+    label: Onward mule account
+    kind: account
+    set: true
+    optional: true
+    find: onward_accounts
+    supports: [pass_through_fast, pass_through_partial, cash_withdrawal, new_account]
+    contradicts: [funds_retained]
+  - name: cashout
+    label: Cash-out agent
+    optional: true
+    find: present_at_cash
+    supports: [atm_copresence]
+    contradicts: [cleared_at_cash]
+phases:
+  - {name: contact, label: Contact, role: extortionist, events: contact, observability: [{source: chat, o: 0.9}, {source: call_log, o: 0.6}]}
+  - {name: threat, label: Threat, role: extortionist, events: threat, after: contact, max_lag_h: 72, observability: [{source: chat, o: 0.9}]}
+  - {name: payment, label: Payment, role: mule_l1, events: payment, after: threat, max_lag_h: 168, observability: [{source: bank_statement, of: victim, o: 0.95}]}
+  - {name: layering, label: Layering, role: mule_l1, events: layering, after: payment, max_lag_h: 12, observability: [{source: bank_statement, of: mule_l1, o: 0.95}]}
+  - {name: cash_out, label: Cash-out, role: mule_l2, events: cash_out, after: layering, max_lag_h: 72, observability: [{source: bank_statement, of: mule_l2, o: 0.9}, {source: atm_journal, o: 0.9}]}
+transitions:
+  contact: {median_min: 40, sigma: 1.0}
+  threat: {median_min: 600, sigma: 1.0}
+  payment: {median_min: 60, sigma: 0.8}
+  layering: {median_min: 80, sigma: 0.6}

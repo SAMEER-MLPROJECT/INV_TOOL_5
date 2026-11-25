@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sakshya | Evidence correlation and crime reconstruction</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4e89'/%3E%3Cpath d='M9 21c2 2 4 3 7 3 4 0 7-2 7-5s-3-4-7-5-6-2-6-4 2-3 5-3c2 0 4 1 5 2' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/static/vendor/vis-timeline/vis-timeline-graph2d.min.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">S</span>
+        <div>
+          <div class="brand-name">Sakshya</div>
+          <div class="brand-sub">Evidence correlation and crime reconstruction</div>
+        </div>
+      </div>
+      <div class="case-picker">
+        <label for="case-select">Case</label>
+        <select id="case-select" aria-label="Select case"></select>
+      </div>
+      <div class="top-actions">
+        <button class="btn ghost" id="upload-btn" type="button">Add case</button>
+        <a class="btn" id="report-btn" href="#" target="_blank" rel="noopener">Case report</a>
+      </div>
+    </header>
+    <div class="shell">
+      <nav class="sidenav" aria-label="Views">
+        <a data-view="overview" href="#">Overview</a>
+        <a data-view="timeline" href="#">Reconstruction</a>
+        <a data-view="graph" href="#">Link graph</a>
+        <a data-view="map" href="#">Map</a>
+        <a data-view="money" href="#">Money and freeze</a>
+        <a data-view="predict" href="#">Predict</a>
+        <a data-view="leads" href="#">Next requests</a>
+        <a data-view="people" href="#">People</a>
+        <a data-view="links" href="#">Tested links</a>
+        <a data-view="evidence" href="#">Evidence and custody</a>
+        <div class="nav-sep"></div>
+        <a data-view="evaluation" href="#">Evaluation</a>
+      </nav>
+      <main id="view" class="view" tabindex="-1"></main>
+      <aside id="drawer" class="drawer" aria-hidden="true">
+        <div class="drawer-head">
+          <div id="drawer-title" class="drawer-title"></div>
+          <button class="icon-btn" id="drawer-close" type="button" aria-label="Close panel">&times;</button>
+        </div>
+        <div id="drawer-body" class="drawer-body"></div>
+      </aside>
+    </div>
+    <div id="modal" class="modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-head">
+          <h2 id="modal-title"></h2>
+          <button class="icon-btn" id="modal-close" type="button" aria-label="Close">&times;</button>
+        </div>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/static/vendor/cytoscape/cytoscape.min.js"></script>
+    <script src="/static/vendor/fcose/layout-base.min.js"></script>
+    <script src="/static/vendor/fcose/cose-base.min.js"></script>
+    <script src="/static/vendor/fcose/cytoscape-fcose.min.js"></script>
+    <script src="/static/vendor/vis-timeline/vis-timeline-graph2d.min.js"></script>
+    <script src="/static/vendor/leaflet/leaflet.js"></script>
+    <script type="module" src="/static/js/main.js"></script>
+  </body>
+</html>
